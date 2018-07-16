@@ -1,0 +1,11 @@
+development: &default
+  adapter: postgresql
+  encoding: unicode
+  database: ngo_blog_development
+  pool: 5
+  username: "postgres"
+  password: ""
+
+test:
+  <<: *default
+  database: ngo_blog_test
