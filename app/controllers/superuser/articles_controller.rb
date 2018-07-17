@@ -22,7 +22,7 @@ module Superuser
     private
 
     def article_params
-    	params.require(:article).permit(:content,:title, :category_id)
+    	params.require(:article).permit(:content,:title, :category_id, :image)
     end
 
   end

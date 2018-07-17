@@ -50,6 +50,11 @@ gem 'simple_form'
 #wysihtml5
 gem 'summernote-rails', '~> 0.8.10.0'
 
+#Handle Images
+gem "paperclip", "~> 6.0.0"
+gem 'paperclip-cloudinary'
+# Enviroinment
+gem 'figaro'
 
 
 group :development, :test do

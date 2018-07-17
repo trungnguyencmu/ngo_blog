@@ -89,6 +89,14 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+
+  #Paperclip config
+  config.paperclip_defaults = {
+    storage: :cloudinary,
+    path: "production/:class/:attachment/:id/:style/:filename",
+    cloudinary_credentials: Rails.root.join("config/cloudinary.yml")
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

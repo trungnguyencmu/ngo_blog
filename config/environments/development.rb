@@ -62,4 +62,11 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  #Paperclip config
+  config.paperclip_defaults = {
+    storage: :cloudinary,
+    path: "development/:class/:attachment/:id/:style/:filename",
+    cloudinary_credentials: Rails.root.join("config/cloudinary.yml")
+  }
 end
