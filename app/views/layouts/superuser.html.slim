@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title
+      | Scry
+    = csrf_meta_tags
+    = stylesheet_link_tag    'superuser', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'superuser', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag 'favicon.ico'
+  body
+    #page-wrap class=(page_wrapper)
+      header
+        = render 'layouts/message'
+        = render 'layouts/superuser/header'
+      main
+        = yield
+
+    = javascript_init
+
