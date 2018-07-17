@@ -7,14 +7,10 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'superuser', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'superuser', 'data-turbolinks-track': 'reload'
-    = favicon_link_tag 'favicon.ico'
+    / = favicon_link_tag 'favicon.ico'
   body
-    #page-wrap class=(page_wrapper)
-      header
-        = render 'layouts/message'
-        = render 'layouts/superuser/header'
-      main
-        = yield
+    main
+      = yield
 
-    = javascript_init
+
 
