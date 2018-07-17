@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   namespace :superuser do
     get :/, controller: :articles, action: :index
+    resources :articles
   end
 end

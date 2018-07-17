@@ -1,0 +1,8 @@
+.container
+	.row
+		.col-md-12
+			= simple_form_for [:superuser, @article] do |a|
+				= a.input :category_id, collection: Category.all
+				= a.input :title
+				= a.input :content, as: :summernote
+				= a.submit "Submit"
