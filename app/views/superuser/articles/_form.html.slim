@@ -1,0 +1,10 @@
+.container
+	.row
+		.col-md-12
+			= simple_form_for [:superuser, article] do |a|
+				= a.input :category_id, collection: Category.all
+				= a.input :image
+				= image_tag(article.image.url, class: 'img-fluid') if article.image.present?
+				= a.input :title
+				= a.input :content, as: :summernote
+				= a.submit "Submit"

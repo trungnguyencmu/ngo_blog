@@ -1,7 +1,30 @@
 .container
 	.row
 		.col-md-12
-			- @articles.each do |article|
-				.h2 = article.title
-				.content = raw(article.content)
-				hr
+			table.table.table-responsive
+			  thead
+			    tr
+			      th[scope="col"]
+			        | #
+			      th[scope="col"]
+			        | title
+			      th[scope="col"]
+			        | description
+			      th[scope="col"]
+			        |
+			      th[scope="col"]
+			        |
+			  tbody
+			  	- @articles.each_with_index do |article, index|
+				    tr
+				      th[scope="row"]
+				        | #{index}
+				      td
+				        | #{article.title}
+				      td
+				        | #{raw article.content.truncate(300)}
+				      td
+				        = link_to "Edit", edit_superuser_article_path(article), class: "btn btn-success"
+				      td
+				        = link_to "Delete", edit_superuser_article_path(article), class: "btn btn-danger"
+

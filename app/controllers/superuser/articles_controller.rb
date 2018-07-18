@@ -10,6 +10,19 @@ module Superuser
     	@article = Article.new
     end
 
+    def edit
+      @article = Article.find(params[:id])
+    end
+
+    def update
+      @article = Article.find(params[:id])
+      if @article.update_attributes(article_params)
+        redirect_to edit_superuser_article_path, notice: "Update successfully"
+      else
+        render :edit
+      end
+    end
+
     def create
     	@article = Article.new(article_params)
     	if @article.save
