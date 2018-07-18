@@ -106,6 +106,8 @@ GEM
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hpricot (0.8.6)
@@ -187,6 +189,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.2.0)
       actionpack (= 5.2.0)
       activesupport (= 5.2.0)
@@ -283,6 +290,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   figaro
+  font-awesome-rails
   html2slim
   jbuilder (~> 2.5)
   jquery-rails
@@ -293,6 +301,7 @@ DEPENDENCIES
   pry-rails (~> 0.3.4)
   puma (~> 3.11)
   rails (~> 5.2.0)
+  rails_12factor
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form

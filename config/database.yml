@@ -6,6 +6,14 @@ development: &default
   username: "postgres"
   password: ""
 
+production:
+  <<: *default
+  adapter: postgresql
+  database: ngo_blog_production
+  username: "postgres"
+
+
+
 test:
   <<: *default
   database: ngo_blog_test
