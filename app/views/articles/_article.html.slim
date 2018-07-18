@@ -7,8 +7,8 @@ a[href="javascript::;"]
     a[href="javascript::;"]
       | #{article.category_name}
   p
-    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec mauris sit amet mi posuere imperdiet. Sed congue velit placerat sapien gravida sagittis. Phasellus in convallis urna, sit amet sollicitudin augue. Nullam vel est a neque lobortis iaculis....
-    a.heading_color[href="javascript::;"]
+    | #{raw (article.content.truncate(400))}
+    a.heading_color[href="#{article_path(article)}"]
       |  Continue Reading
   hr
   p
