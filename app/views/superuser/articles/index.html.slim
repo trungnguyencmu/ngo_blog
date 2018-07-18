@@ -22,7 +22,7 @@
 				      td
 				        | #{article.title}
 				      td
-				        | #{raw article.content.truncate(300)}
+				        | #{article.description}
 				      td
 				        = link_to "Edit", edit_superuser_article_path(article), class: "btn btn-success"
 				      td

@@ -46,7 +46,7 @@ module Superuser
     end
 
     def article_params
-    	params.require(:article).permit(:content,:title, :category_id, :image)
+    	params.require(:article).permit(:content,:title, :category_id, :image, :description)
     end
 
   end

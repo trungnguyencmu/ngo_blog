@@ -7,7 +7,7 @@ a[href="javascript::;"]
     a[href="javascript::;"]
       | #{article.category_name}
   p
-    | #{raw (article.content.truncate(400))}
+    | #{article.description}
     a.heading_color[href="#{article_path(article)}"]
       |  Continue Reading
   hr
