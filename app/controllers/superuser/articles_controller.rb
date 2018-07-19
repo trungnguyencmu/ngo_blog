@@ -3,7 +3,7 @@
 module Superuser
   class ArticlesController < Superuser::BaseController
     def index
-      @articles = Article.all
+      @articles = Article.all.page params[:page]
     end
 
     def new

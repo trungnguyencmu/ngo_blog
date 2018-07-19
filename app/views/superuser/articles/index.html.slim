@@ -31,4 +31,5 @@
                 = link_to article.active ? "Disable" : "Active", superuser_article_active_path(article), remote: true, method: :put, class: "btn btn-primary", data: {article_id: article.id}
               td
                 = link_to "Delete", superuser_article_path(article), method: :delete,class: "btn btn-danger", data: {confirm: "Are you sure?"}
+      = paginate @articles
 

@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+	paginates_per 20
   extend FriendlyId
   friendly_id :title, use: :slugged
 
