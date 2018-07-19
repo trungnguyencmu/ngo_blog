@@ -235,6 +235,8 @@ GEM
     slim (3.0.9)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 1.3.3, < 2.1)
+    social-share-button (1.1.0)
+      coffee-rails
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -309,6 +311,7 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   slim
+  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   summernote-rails (~> 0.8.10.0)

@@ -1,4 +1,4 @@
-a[href="javascript::;"]
+a[href="#{article_path(article)}"
   img.img-fluid.center-block[src="#{article.image.url}" height="324"]
 .blog-content.bg-white
   h3 = article.title
@@ -12,10 +12,11 @@ a[href="javascript::;"]
       |  Continue Reading
   hr
   p
-    span
-      | Share :
-      a[href="javascript::;"]
-        i.fa.fa-facebook.margin_left10[aria-hidden="true"]
+    = render 'shared/socials/share', article: article
+    / span
+    /   | Share :
+    /   a[href="javascript::;"]
+    /     i.fa.fa-facebook.margin_left10[aria-hidden="true"]
 
     span.pull-right
       | By :

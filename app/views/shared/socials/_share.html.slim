@@ -1,0 +1,7 @@
+.shared-socials-share-container
+  div style=("display: inline-flex;")
+    / .social-share-button
+    /   a.ssb-icon.ssb-facebook href="#{tour_url(tour)}" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=#{tour_url(tour)}','popup','width=555,height=400'); return false;" target="popup" title="#{tour.title}" desc="#{tour.experience_description}" image="#{tour.assets.first.image.url(:thumb) if tour.assets.present?}"
+
+    = social_share_button_tag("", url: article_url(article), desc: article.description)
+
