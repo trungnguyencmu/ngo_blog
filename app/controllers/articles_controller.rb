@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-		@article = Article.where(active: true).find(params[:id])
+		@article = Article.friendly.where(active: true).find(params[:id])
 	end
 
 end
