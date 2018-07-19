@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :articles
   namespace :superuser do
     get :/, controller: :articles, action: :index
-    resources :articles
+    resources :articles do
+	  	put :active
+	  end
   end
 end

@@ -3,15 +3,24 @@
 module Superuser
   class ArticlesController < Superuser::BaseController
     def index
-    	@articles = Article.all
+      @articles = Article.all
     end
 
     def new
-    	@article = Article.new
+      @article = Article.new
     end
 
     def edit
       @article = Article.find(id)
+    end
+
+    def active
+      @article = Article.find(params[:article_id])
+      @article.update_attributes(active: !@article.active)
+      respond_to do |format|
+        format.js
+        format.html { redirect_to root_path}
+      end
     end
 
     def update
@@ -24,12 +33,12 @@ module Superuser
     end
 
     def create
-    	@article = Article.new(article_params)
-    	if @article.save
-    		redirect_to superuser_articles_path, notice: "Create successfully"
-    	else
-    		render :new
-    	end
+      @article = Article.new(article_params)
+      if @article.save
+        redirect_to superuser_articles_path, notice: "Create successfully"
+      else
+        render :new
+      end
     end
 
     def destroy
@@ -46,7 +55,7 @@ module Superuser
     end
 
     def article_params
-    	params.require(:article).permit(:content,:title, :category_id, :image, :description)
+      params.require(:article).permit(:content,:title, :category_id, :image, :description)
     end
 
   end

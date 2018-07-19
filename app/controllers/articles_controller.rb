@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
 	def index
-		@articles = Article.all
+		@articles = Article.all.where(active: true)
 	end
 
 	def show
-		@article = Article.find(params[:id])
+		@article = Article.where(active: true).find(params[:id])
 	end
 
 end
