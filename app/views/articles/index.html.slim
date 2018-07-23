@@ -1,5 +1,11 @@
-.container
-	.row
-		- @articles.each do |article|
-			.col-md-6
-				= render partial: "article", locals: {article: article}
+#articles
+	.container
+		.row
+			- @articles.each do |article|
+				.col-md-6
+					= render partial: "article", locals: {article: article}
+		br
+		.row
+			.col
+				.float-right
+					= paginate @articles

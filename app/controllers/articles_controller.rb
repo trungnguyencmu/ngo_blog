@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	def index
-		@articles = Article.all.where(active: true)
+		@articles = Article.all.where(active: true).order(:created_at).page(params[:page])
 	end
 
 	def show

@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari'
+gem 'jquery-infinite-pages'
 
 #Admin
 gem 'activeadmin'

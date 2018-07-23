@@ -17,4 +17,5 @@
 //= require activestorage
 //= require turbolinks
 //= require social-share-button
+//= require jquery.infinite-pages
 //= require_tree .

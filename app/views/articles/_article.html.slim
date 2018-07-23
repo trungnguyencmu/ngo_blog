@@ -1,24 +1,25 @@
-a[href="#{article_path(article)}"]
-  img.img-fluid.center-block[src="#{article.image.url}" height="324"]
-.blog-content.bg-white
-  h3 = article.title
-  p
-    | Category :
-    a[href="javascript::;"]
-      | #{article.category_name}
-  p
-    | #{article.description}
-    a.heading_color[href="#{article_path(article)}"]
-      |  Continue Reading
-  hr
-  p
-    = render 'shared/socials/share', article: article
-    / span
-    /   | Share :
-    /   a[href="javascript::;"]
-    /     i.fa.fa-facebook.margin_left10[aria-hidden="true"]
+.article-container
+  a[href="#{article_path(article)}"]
+    img.img-fluid.center-block[src="#{article.image.url}" height="324"]
+  .blog-content.bg-white
+    h3 = article.title
+    p
+      | Category :
+      a[href="javascript::;"]
+        | #{article.category_name}
+    p
+      | #{article.description}
+      a.heading_color[href="#{article_path(article)}"]
+        |  Continue Reading
+    hr
+    p
+      = render 'shared/socials/share', article: article
+      / span
+      /   | Share :
+      /   a[href="javascript::;"]
+      /     i.fa.fa-facebook.margin_left10[aria-hidden="true"]
 
-    span.pull-right
-      | By :
-      strong
-        | Ngộ
+      span.pull-right
+        | By :
+        strong
+          | Ngộ
