@@ -11,4 +11,12 @@ class Article < ActiveRecord::Base
 
   delegate :name, to: :category, prefix: true
 
+
+  def self.search(search)
+	  if search
+	    Article.where('title ILIKE ?', "%#{search}%")
+	  else
+	    Article.all
+	  end
+	end
 end

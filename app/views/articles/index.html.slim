@@ -1,11 +1,13 @@
 #articles
-	.container
-		.row
-			- @articles.each do |article|
-				.col-md-6
-					= render partial: "article", locals: {article: article}
-		br
-		.row
-			.col
-				.float-right
-					= paginate @articles
+  .container
+    .row
+      - if @articles.size == 0
+        .no-result Không tìm thấy
+      - @articles.each do |article|
+        .col-md-6
+          = render partial: "article", locals: {article: article}
+    br
+    .row
+      .col
+        .float-right
+          = paginate @articles
